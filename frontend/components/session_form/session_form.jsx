@@ -36,7 +36,7 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="login-form-box">
           Welcome to Pinban!
           <br/>
-          {formType} or {navLink} instead
+          {formType}
           {this.renderErrors()}
           <div className="login-form">
             <br/>
@@ -48,8 +48,11 @@ class SessionForm extends React.Component {
               <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" />
             </label>
             <br/>
+            <br/>
             <input className="session-submit" type="submit" value={formType}/>
           </div>
+          <br/>
+          {navLink} instead
         </form>
       </div>
     );

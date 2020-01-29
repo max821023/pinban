@@ -10,12 +10,12 @@ import {
 const App = () => (
   <div>
     <header>
-      <h1>PINBAN</h1>
-      <GreetingContainer />
+      <h1><i class="fab fa-trello"></i>PINBAN</h1>
+      <Route exact path="/" component={GreetingContainer}/>
     </header>
 
-    <AuthRoute path="/login" component={LoginFormContainer} />
-    <AuthRoute path="/signup" component={SignupFormContainer} />
+    <AuthRoute exact path="/login" component={LoginFormContainer} />
+    <AuthRoute exact path="/signup" component={SignupFormContainer} />
   </div>
 );
 

@@ -22,11 +22,13 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     const { errors } = this.props;
-    return (
-      <ul>
-        {errors.map((error, i) => (<li key={`error ${i}`}>{error}</li>))}
-      </ul>
-    )
+    if (errors.length > 0) {
+      return (
+        <ul className="session-error">
+          {errors.map((error, i) => (<li key={`error ${i}`}>{error}</li>))}
+        </ul>
+      )
+    }
   }
 
   renderSignUpMSG(formType) {
@@ -43,8 +45,8 @@ class SessionForm extends React.Component {
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <br/>
-          {formType} to Pinban
-          {this.renderErrors()}
+          <p>{this.renderErrors()}</p> 
+          <p className="session-title">{formType} to Pinban</p> 
           <div className="login-form">
             <br/>
             <label>
@@ -67,10 +69,11 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-            {this.renderSignUpMSG(formType)}
+            <p className="signup-msg">{this.renderSignUpMSG(formType)}</p>
             <input className="session-submit" type="submit" value={formType}/>
           </div>
-          {navLink} instead
+          <hr/>
+          <p className="other-links">{navLink} instead</p> 
         </form>
       </div>
     );

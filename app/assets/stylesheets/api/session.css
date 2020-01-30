@@ -57,8 +57,8 @@ table {
  .login-form-container {
    display: flex;
    justify-content: center;
-   margin: 10px auto;
-   padding-bottom: 10px;
+   margin: 0px auto 30px;
+   padding: 25px 40px;
    font-family: sans-serif;
    text-align: center;
    background-color: #FFF;
@@ -66,28 +66,73 @@ table {
    box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px;
  }
 
+ ul.session-error {
+   background-color: #EB5A46;
+   color: #fbedeb;
+   font-size: 14px;
+   display: inline-block;
+   border: 1px solid #EB5A46;
+   border-radius: 4px;
+   font-weight: 300;
+   margin: 14px 0;
+   padding: 7px 14px;
+ }
+
+ p.session-title {
+   font-weight: bold;
+   font-size: 16px;
+   color: #5E6C84;
+   line-height: 28px;
+   margin-bottom: 8px;
+ }
+
+ p.signup-msg {
+   margin: 20px 0;
+   font-size: 12px;
+   color: #999;
+   width: 320px;
+ }
+
  .login-form input{
    background-color: #FAFBFC;
    padding: 7px;
    border-radius: 3px;
-   margin-bottom: 15px;
+   margin-bottom: 16.8px;
    width: 320px;
+   height: 44px;
+   font-size: 14px;
+   border: 2px solid #DFE1E6;
+   font-weight: 300;
+ }
+
+ input.login-input {
+   margin-top: none;
  }
 
  header > h1 {
    display: flex;
    justify-content: center;
    align-items: center;
-   border: 1px solid grey;
    font-family: 'Lobster', cursive;
    color: #0070bc;
-   padding: 15px;
+   margin: 40px;
  }
 
  header i {
    margin-right: 10px;
+   font-size: 36px;
  }
 
  header span {
    font-size: 36px;
+ }
+
+ input.session-submit {
+   background-color: #5dab4a;
+   color: white;
+   box-shadow: none;
+   border-radius: .3em;
+   border: none;
+   height: 33px;
+   font-weight: bold;
  }

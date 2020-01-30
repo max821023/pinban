@@ -43,11 +43,11 @@ class SessionForm extends React.Component {
   renderOtherLinks(formType) {
     if (formType === 'Sign up') {
       return (
-        <Link to="/login" className="other-links">Already have an account? Log in</Link>
+        <Link to="/login" className="other-links" onClick={this.props.clearErrors}>Already have an account? Log in</Link>
       )
     } else if (formType = "Log in") {
       return (
-        <Link to="/signup" className="other-links">Sign up for an account</Link>
+        <Link to="/signup" className="other-links" onClick={this.props.clearErrors}>Sign up for an account</Link>
       )
     }
   }

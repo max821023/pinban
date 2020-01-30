@@ -57,7 +57,6 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-            <br/>
             <label>
               <input 
               type="password" 
@@ -69,10 +68,8 @@ class SessionForm extends React.Component {
             </label>
             <br/>
             {this.renderSignUpMSG(formType)}
-            <br/>
             <input className="session-submit" type="submit" value={formType}/>
           </div>
-          <br/>
           {navLink} instead
         </form>
       </div>

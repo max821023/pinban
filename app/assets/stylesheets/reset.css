@@ -1,10 +1,7 @@
- /* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-* {
-  box-sizing: border-box;
-}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -49,45 +46,3 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
- body {
-   background-color:#FAFBFC;
- }
- 
- .login-form-container {
-   display: flex;
-   justify-content: center;
-   margin: 10px auto;
-   padding-bottom: 10px;
-   font-family: sans-serif;
-   text-align: center;
-   background-color: #FFF;
-   width: 400px;
-   box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px;
- }
-
- .login-form input{
-   background-color: #FAFBFC;
-   padding: 7px;
-   border-radius: 3px;
-   margin-bottom: 15px;
-   width: 320px;
- }
-
- header > h1 {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border: 1px solid grey;
-   font-family: 'Lobster', cursive;
-   color: #0070bc;
-   padding: 15px;
- }
-
- header i {
-   margin-right: 10px;
- }
-
- header span {
-   font-size: 36px;
- }

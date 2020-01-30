@@ -29,25 +29,46 @@ class SessionForm extends React.Component {
     )
   }
 
+  renderSignUpMSG(formType) {
+    if (formType === 'Sign up') {
+      return (
+        <small>By signing up, you confirm that you've read and accepted our Terms of Service and Privacy Policy.</small>
+      ) 
+    }
+  }
+
   render() {
     const { formType, navLink } = this.props;
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to Pinban!
           <br/>
-          {formType}
+          {formType} to Pinban
           {this.renderErrors()}
           <div className="login-form">
             <br/>
-            <label>Username:
-              <input type="text" value={this.state.username} onChange={this.update('username')} className="login-input"/>
+            <label>
+              <input 
+              type="text" 
+              value={this.state.username} 
+              onChange={this.update('username')} 
+              className="login-input"
+              placeholder="Enter username"
+              />
             </label>
             <br/>
-            <label>Password:
-              <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" />
+            <br/>
+            <label>
+              <input 
+              type="password" 
+              value={this.state.password} 
+              onChange={this.update('password')} 
+              className="login-input" 
+              placeholder="Enter password"
+              />
             </label>
             <br/>
+            {this.renderSignUpMSG(formType)}
             <br/>
             <input className="session-submit" type="submit" value={formType}/>
           </div>

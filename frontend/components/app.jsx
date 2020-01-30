@@ -10,7 +10,10 @@ import {
 const App = () => (
   <div>
     <header>
-      <h1><i class="fab fa-trello"></i>PINBAN</h1>
+      <h1>
+        <i className="fab fa-trello"></i>
+        <span>Pinban</span> 
+      </h1>
       <Route exact path="/" component={GreetingContainer}/>
     </header>
 

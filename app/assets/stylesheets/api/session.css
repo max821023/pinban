@@ -1,13 +1,37 @@
+ body {
+   background-color:#FAFBFC;
+ }
+ 
  .login-form-container {
    display: flex;
    justify-content: center;
-   margin-top: 100px;
+   margin-top: 10px;
    border: 1px solid grey;
+   font-family: sans-serif;
+   background-color: #FFF;
+   box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px;
+ }
+
+ .login-form input{
+   background-color: #FAFBFC;
+   margin-bottom: 2px;
+   padding: 7px;
  }
 
  header > h1 {
    display: flex;
    justify-content: center;
+   align-items: center;
    border: 1px solid grey;
-   color: #e02007;
+   font-family: 'Lobster', cursive;
+   color: #0070bc;
+   padding: 15px;
+ }
+
+ header i {
+   margin-right: 10px;
+ }
+
+ header span {
+   font-size: 36px;
  }

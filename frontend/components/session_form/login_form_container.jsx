@@ -7,8 +7,7 @@ import { Link } from 'react-router-dom';
 const mSTP = state => {
   return {
     errors: state.errors.session,
-    formType: 'Log in',
-    navLink: <Link to="/signup">Sign Up</Link>
+    formType: 'Log in'
   };
 };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -34,13 +35,25 @@ class SessionForm extends React.Component {
   renderSignUpMSG(formType) {
     if (formType === 'Sign up') {
       return (
-        <small>By signing up, you confirm that you've read and accepted our Terms of Service and Privacy Policy.</small>
+        <p className="signup-msg">By signing up, you confirm that you've read and accepted our Terms of Service and Privacy Policy.</p>
       ) 
     }
   }
 
+  renderOtherLinks(formType) {
+    if (formType === 'Sign up') {
+      return (
+        <Link to="/login" className="other-links">Already have an account? Log in</Link>
+      )
+    } else if (formType = "Log in") {
+      return (
+        <Link to="/signup" className="other-links">Sign up for an account</Link>
+      )
+    }
+  }
+
   render() {
-    const { formType, navLink } = this.props;
+    const { formType } = this.props;
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -68,12 +81,11 @@ class SessionForm extends React.Component {
               placeholder="Enter password"
               />
             </label>
-            <br/>
-            <p className="signup-msg">{this.renderSignUpMSG(formType)}</p>
+            {this.renderSignUpMSG(formType)}
             <input className="session-submit" type="submit" value={formType}/>
           </div>
           <hr/>
-          <p className="other-links">{navLink} instead</p> 
+          {this.renderOtherLinks(formType)} 
         </form>
       </div>
     );

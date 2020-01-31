@@ -9,24 +9,31 @@ class Greeting extends React.Component {
 
   render() {
     const { currentUser, logout } = this.props
-    console.log(this.state.showDropDown);
     return (
     <div className = "header-group" >
       <div className="navbar">
         <div className="left-side">
-          <i className="material-icons">home</i>
+          <i className="material-icons">
+            <Link to="/boards">home</Link>
+          </i>
         </div>
         <div className="center">
           <i className="fab fa-trello"></i>
-          <span className="icon">Pinban</span>
+          <span className="icon">
+            <Link to="/boards">Pinban</Link>
+          </span>
         </div>
         <div className="right-side">
-          <p className="initials" onClick={() => this.setState({ showDropDown: !this.state.showDropDown})}>ML</p>
-            {this.state.showDropDown && <div>drop down content</div>}
+          <p className="initials" onClick={() => this.setState({ showDropDown: !this.state.showDropDown})}>{currentUser.username[0].toUpperCase()}</p>
+          {this.state.showDropDown && <div className="dropdown">
+            <ul>
+              <li className="dropdownName">{currentUser.username}</li>
+              <li><hr /></li>
+              <li><button className="header-button" onClick={logout}>Log Out</button></li>
+            </ul>
+          </div>}
         </div>
       </div>
-      <h2 className="header-name">Hi, {currentUser.username}!</h2>
-      <button className="header-button" onClick={logout}>Log Out</button>
     </div >
     );
   }

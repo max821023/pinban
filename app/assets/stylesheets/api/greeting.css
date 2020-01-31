@@ -1,13 +1,28 @@
 .navbar {
-  height: 32px;
-  width: 99.9%;
   background-color: #026aa7;
   padding: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.left-side {
+  height: 32px;
+  width: 32px;
+  color: #FFF;
+  background-color: #5898c0;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.left-side:hover {
+  background-color: #4089b7;
 }
 
 div.center {
-  display: flex;
-  justify-content: center;
+  justify-self: center;
   align-items: center;
 }
 
@@ -21,4 +36,18 @@ div.center span.icon {
   font-family: 'Lobster', cursive;
   font-size: 26px;
   color: #87b5d2;
+}
+
+/* div.right-side {
+  margin-right: 5px;
+} */
+
+p.initials {
+  color: black;
+  font-family: sans-serif;
+  background-color: #dfe1e6;
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+  display: block;
 }

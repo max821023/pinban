@@ -14,3 +14,7 @@
  *= require_tree ./api
  *= require_self
  */
+
+main {
+  box-sizing: border-box;
+}

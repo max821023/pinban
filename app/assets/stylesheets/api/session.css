@@ -62,7 +62,7 @@
    margin-top: none;
  }
 
- header > h1 {
+ div > h1.header {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -71,13 +71,14 @@
    margin: 40px;
  }
 
- header i {
+ div i.fab.fa-trello {
    margin-right: 10px;
    font-size: 36px;
  }
 
- header span {
+ div span.icon {
    font-size: 36px;
+   cursor: default;
  }
 
  input.session-submit {

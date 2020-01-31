@@ -1,0 +1,24 @@
+.navbar {
+  height: 32px;
+  width: 99.9%;
+  background-color: #026aa7;
+  padding: 4px;
+}
+
+div.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.center i.fab.fa-trello {
+  font-size: 22px;
+  color: #87b5d2;
+  margin-right: 3px;
+}
+
+div.center span.icon {
+  font-family: 'Lobster', cursive;
+  font-size: 26px;
+  color: #87b5d2;
+}

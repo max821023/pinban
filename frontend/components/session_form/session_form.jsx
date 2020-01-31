@@ -55,38 +55,44 @@ class SessionForm extends React.Component {
   render() {
     const { formType } = this.props;
     return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          <br/>
-          <p>{this.renderErrors()}</p> 
-          <p className="session-title">{formType} to Pinban</p> 
-          <div className="login-form">
+      <div>
+        <h1 className="header">
+          <i className="fab fa-trello"></i>
+          <span className="icon">Pinban</span>
+        </h1>
+        <div className="login-form-container">
+          <form onSubmit={this.handleSubmit} className="login-form-box">
             <br/>
-            <label>
-              <input 
-              type="text" 
-              value={this.state.username} 
-              onChange={this.update('username')} 
-              className="login-input"
-              placeholder="Enter username"
-              />
-            </label>
-            <br/>
-            <label>
-              <input 
-              type="password" 
-              value={this.state.password} 
-              onChange={this.update('password')} 
-              className="login-input" 
-              placeholder="Enter password"
-              />
-            </label>
-            {this.renderSignUpMSG(formType)}
-            <input className="session-submit" type="submit" value={formType}/>
-          </div>
-          <hr/>
-          {this.renderOtherLinks(formType)} 
-        </form>
+            <p>{this.renderErrors()}</p> 
+            <p className="session-title">{formType} to Pinban</p> 
+            <div className="login-form">
+              <br/>
+              <label>
+                <input 
+                type="text" 
+                value={this.state.username} 
+                onChange={this.update('username')} 
+                className="login-input"
+                placeholder="Enter username"
+                />
+              </label>
+              <br/>
+              <label>
+                <input 
+                type="password" 
+                value={this.state.password} 
+                onChange={this.update('password')} 
+                className="login-input" 
+                placeholder="Enter password"
+                />
+              </label>
+              {this.renderSignUpMSG(formType)}
+              <input className="session-submit" type="submit" value={formType}/>
+            </div>
+            <hr/>
+            {this.renderOtherLinks(formType)} 
+          </form>
+        </div>
       </div>
     );
   };

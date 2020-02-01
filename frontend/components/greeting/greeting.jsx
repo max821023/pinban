@@ -5,6 +5,11 @@ class Greeting extends React.Component {
   constructor(props) {
     super(props)
     this.state = { showDropDown: false }
+    this.renderDropdown = this.renderDropdown.bind(this);
+  }
+
+  renderDropdown() {
+    this.setState({ showDropDown: !this.state.showDropDown })
   }
 
   render() {
@@ -24,12 +29,13 @@ class Greeting extends React.Component {
           </span>
         </div>
         <div className="right-side">
-          <p className="initials" onClick={() => this.setState({ showDropDown: !this.state.showDropDown})}>{currentUser.username[0].toUpperCase()}</p>
+          <p className="initials" onClick={this.renderDropdown}>{currentUser.username[0].toUpperCase()}</p>
           {this.state.showDropDown && <div className="dropdown">
-            <ul>
-              <li className="dropdownName">{currentUser.username}</li>
-              <li><hr /></li>
-              <li><button className="header-button" onClick={logout}>Log Out</button></li>
+            <div><p className="dropdownName">{currentUser.username}</p></div>
+            <p className="x" onClick={this.renderDropdown}><i className="fas fa-times"></i></p>
+            <ul className="dropdownUl">
+              <li className="line"><hr /></li>
+              <li className="logout-button"><button onClick={logout}>Log Out</button></li>
             </ul>
           </div>}
         </div>

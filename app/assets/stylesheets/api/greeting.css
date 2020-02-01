@@ -38,6 +38,14 @@ div.center span.icon {
   color: #87b5d2;
 }
 
+div.center:hover .fab.fa-trello {
+  color: #cfe1ed;
+}
+
+div.center:hover .icon {
+  color: #cfe1ed;
+}
+
 div.right-side p {
   display: flex;
   justify-content: center;
@@ -58,6 +66,9 @@ div.dropdown {
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 0 8px 16px -4px rgba(9,30,66,.25), 0 0 0 1px rgba(9,30,66,.08);
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: 400;
 }
 
 p.initials {
@@ -70,17 +81,42 @@ p.initials {
   display: block;
 }
 
-div.dropdown ul {
-  padding: 10px;
-  font-size: 14px;
-  font-family: sans-serif;
+div.dropdown p.dropdownName {
+  text-align: center;
   font-weight: 400;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 10px;
+  cursor: text;
+  color: #5e6c84;
 }
 
-li.dropdownName {
-  text-align: center;
+p.x {
+  position: absolute;
+  top: 12px;
+  right: 12px;
 }
 
 li hr {
   margin: 8px 0;
 }
+
+li.logout-button {
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+li.logout-button:hover {
+  background-color: #f5f6f8;
+}
+
+li.line {
+  padding: 5px 10px 0 10px;
+}
+
+.logout-button button {
+  width: 100%;
+  color: #172b4d;
+  font-weight: 400;
+}
+

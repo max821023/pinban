@@ -30,4 +30,9 @@ class User < ApplicationRecord
     self.session_token ||= SecureRandom.urlsafe_base64
   end
 
+  has_many :boards,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Board
+
 end

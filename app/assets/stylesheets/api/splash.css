@@ -14,10 +14,14 @@ div.homepage {
 .nav-home {
   font-family: 'Lobster', cursive;
   font-size: 36px;
+  margin-left: 6px;
 }
 
 .login-signup {
   font-size: 17.5px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
 }
 
 .login-btn {
@@ -26,6 +30,10 @@ div.homepage {
 
 .signup-btn {
   padding: 4px 8px;
+  color: #0079BF;
+  background-color: white;
+  margin-left: 4px;
+  border-radius: 3px;
 }
 
 .center-items {
@@ -52,7 +60,24 @@ div.homepage {
 }
 
 .right-center {
-  margin-left: 8.33333333%;
+  /* margin-left: 8.33333333%; */
   padding: 0 15px;
-  min-width: 450px;
+  /* min-width: 450px; */
+}
+
+.right-center img {
+  border-radius: 5px;
+}
+
+@media (min-width: 992px) {
+  .left-center {
+    width: 40%;
+  }
+
+  .right-center {
+    width: 50%;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+  }
 }

@@ -27,15 +27,18 @@ const receiveBoardErrors = (errors) => {
 
 export const fetchBoards = () => dispatch => {
   return BoardAPIUtil.fetchBoards()
-    .then(boards => dispatch(receiveBoards(boards)), errors => dispatch(receiveBoardErrors(errors.responseJSON)))
+    .then(boards => dispatch(receiveBoards(boards)), 
+    errors => dispatch(receiveBoardErrors(errors.responseJSON)))
 };
 
 export const fetchBoard = (boardId) => dispatch => {
   return BoardAPIUtil.fetchBoard(boardId)
-    .then(board => dispatch(receiveBoard(board)), errors => dispatch(receiveBoardErrors(errors.responseJSON)))
+    .then(board => dispatch(receiveBoard(board)), 
+    errors => dispatch(receiveBoardErrors(errors.responseJSON)))
 };
 
 export const createBoard = (board) => dispatch => {
   return BoardAPIUtil.createBoard(board)
-    .then(board => dispatch(receiveBoard(board)), errors => dispatch(receiveBoardErrors(errors.responseJSON)))
+    .then(board => dispatch(receiveBoard(board)), 
+    errors => dispatch(receiveBoardErrors(errors.responseJSON)))
 };

@@ -6,12 +6,14 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import {
   Route
 } from 'react-router-dom';
+import Splash from "./splash/splash";
 
 const App = () => (
   <div>
     <ProtectedRoute exact path="/boards" component={GreetingContainer}/>
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
+    <AuthRoute exact path="/" component={Splash} />
   </div>
 );
 

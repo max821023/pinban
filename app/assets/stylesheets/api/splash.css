@@ -1,0 +1,58 @@
+div.homepage {
+  background-image: linear-gradient(to top left, #516ac2, #137abd);
+  height: 100%;
+  font-family: 'PT Sans', sans-serif;
+  color: #FFF;
+}
+
+.homepage-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.nav-home {
+  font-family: 'Lobster', cursive;
+  font-size: 36px;
+}
+
+.login-signup {
+  font-size: 17.5px;
+}
+
+.login-btn {
+  padding: 4px 8px;
+}
+
+.signup-btn {
+  padding: 4px 8px;
+}
+
+.center-items {
+  display: flex;
+  padding: 112px 15px 80px;
+  margin: 0 47px;
+  flex-wrap: wrap;
+}
+
+.left-center {
+  padding: 0 15px;
+}
+
+.left-center h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.left-center p {
+  font-size: 25px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.right-center {
+  margin-left: 8.33333333%;
+  padding: 0 15px;
+  min-width: 450px;
+}

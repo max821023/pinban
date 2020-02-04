@@ -20,17 +20,28 @@ class BoardIndex extends React.Component {
         <GreetingContainer />
         <div className="board-index-container">
           <div className="board-index-sidebar">
-            <Link to="/boards">
-              <i className="fab fa-trello"></i>
-              <div className="index-board">Boards</div> 
-            </Link>
+            <ul>
+              <li className="board-li">
+                <Link to="/boards">
+                  <i className="fab fa-trello"></i>
+                  <div className="index-board">Boards</div>
+                </Link>
+              </li>
+            </ul>
           </div>
           <div className="all-boards">
             <div className="personal-boards">
-              <i class="far fa-user">Personal Boards</i>
-              <ul>
-                {boards.map(board => <li>{board.title}</li>)}
-                <li>Create new board</li>
+              <div className="personal-board-title">
+                <i class="far fa-user"></i>
+                <span className="board-title">Personal Boards</span>
+              </div>
+              <ul className="personal-boards-li">
+                {boards.map(board => <li>
+                  <span>{board.title}</span>
+                </li>)}
+                <li className="create-new-board">
+                    Create new board
+                </li>
               </ul>
             </div>
           </div>

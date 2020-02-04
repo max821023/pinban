@@ -71,13 +71,15 @@
    margin: 40px;
  }
 
- div i.fab.fa-trello {
-   margin-right: 10px;
+ div .header {
    font-size: 36px;
  }
 
+ div .header i {
+   margin-right: 10px;
+ }
+
  div span.icon {
-   font-size: 36px;
    cursor: default;
  }
 

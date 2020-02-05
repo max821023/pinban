@@ -32,7 +32,7 @@ class BoardIndex extends React.Component {
           <div className="all-boards">
             <div className="personal-boards">
               <div className="personal-board-title">
-                <i class="far fa-user"></i>
+                <i className="far fa-user"></i>
                 <span className="board-title">Personal Boards</span>
               </div>
               <ul className="personal-boards-li">

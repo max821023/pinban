@@ -81,6 +81,7 @@ i.far.fa-user {
   text-align: center;
   vertical-align: middle;
   line-height: 76px;
+  cursor: pointer;
 }
 
 .personal-boards-li li.create-new-board:hover {

@@ -13,7 +13,8 @@ const mSTP = (state) => {
 
 const mDTP = dispatch => {
   return {
-    fetchBoards: () => dispatch(fetchBoards())
+    fetchBoards: () => dispatch(fetchBoards()),
+    openModal: (type) => dispatch(openModal(type))
   }
 };
 

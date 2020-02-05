@@ -39,7 +39,7 @@ class BoardIndex extends React.Component {
                 {boards.map(board => <li>
                   <span>{board.title}</span>
                 </li>)}
-                <li className="create-new-board">
+                <li className="create-new-board" onClick={() => this.props.openModal('create board')}>
                     Create new board
                 </li>
               </ul>

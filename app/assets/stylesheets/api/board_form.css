@@ -25,14 +25,22 @@
   height: 24px;
   width: 220px;
   border-radius: 3px;
-}
-
-.board-title-input::placeholder {
-  color: red;
+  margin-right: 20px;
 }
 
 .board-title-input:hover {
-  background-color: #358fc7;
+  background-color: rgba(255, 255, 255, 0.418);
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.board-title-input::placeholder {
+  color: rgba(255, 255, 255, 0.445);
+  z-index: 1;
+}
+
+.board-title-input::placeholder:hover {
+  color: white;
 }
 
 .background-grid {

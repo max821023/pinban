@@ -1,7 +1,7 @@
 import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
-import BoardForm from '../board/board_form';
+import BoardFormContainer from '../board/board_form_container';
 
 function Modal({ modal, closeModal }) {
   if (!modal) {
@@ -10,7 +10,7 @@ function Modal({ modal, closeModal }) {
   let component;
   switch (modal) {
     case 'create board':
-      component = <BoardForm />;
+      component = <BoardFormContainer />;
       break;
     default:
       return null;

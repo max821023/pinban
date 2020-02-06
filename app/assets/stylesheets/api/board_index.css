@@ -66,11 +66,14 @@ i.far.fa-user {
   width: 156px;
   background-color: tomato;
   padding: 10px;
-  margin: 0 16px 16px 0;
   border-radius: 3px;
   color: #fff;
   font-family: sans-serif;
   font-weight: 700;
+}
+
+.personal-boards-li a {
+  margin: 0 16px 16px 0;
 }
 
 .personal-boards-li li.create-new-board {

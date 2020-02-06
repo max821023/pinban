@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class BoardForm extends React.Component {
   constructor(props) {
@@ -13,7 +14,10 @@ class BoardForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const board = Object.assign({}, { title: this.state.title });
-    this.props.createBoard(board); 
+    this.props.createBoard(board).then(board => {
+      this.props.history.push(`/boards/${board.id}`)
+      this.props.closeModal()
+    }); 
   }
 
   update(field) {
@@ -52,4 +56,4 @@ class BoardForm extends React.Component {
   }
 }
 
-export default BoardForm;
+export default withRouter(BoardForm);

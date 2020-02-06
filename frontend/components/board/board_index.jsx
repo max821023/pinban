@@ -17,7 +17,6 @@ class BoardIndex extends React.Component {
 
     return (
       <div>
-        <GreetingContainer />
         <div className="board-index-container">
           <div className="board-index-sidebar">
             <ul>
@@ -36,9 +35,9 @@ class BoardIndex extends React.Component {
                 <span className="board-title">Personal Boards</span>
               </div>
               <ul className="personal-boards-li">
-                {boards.map(board => <li>
-                  <span>{board.title}</span>
-                </li>)}
+                {boards.map(board => 
+                  <Link to={`/boards/${board.id}`}><li><span>{board.title}</span></li></Link>
+                )}
                 <li className="create-new-board" onClick={() => this.props.openModal('create board')}>
                     Create new board
                 </li>

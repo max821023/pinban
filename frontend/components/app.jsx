@@ -14,11 +14,11 @@ import greeting_container from "./greeting/greeting_container";
 
 const App = () => (
   <div>
+    <AuthRoute exact path="/" component={Splash} />
     <ProtectedRoute path="/" component={greeting_container}/>
     <ProtectedRoute exact path="/boards" component={BoardIndexContainer}/>
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
-    <AuthRoute exact path="/" component={Splash} />
     <ProtectedRoute path="/boards/:boardId" component={BoardShowContainer}/>
     <Modal />
   </div>

@@ -100,6 +100,28 @@
    background-color: #61BD4F;
    border-color: #61BD4F;
  }
+
+.demo-user-login-btn {
+   background-color: #ab4a4a;
+   color: white;
+   height: 33px !important;
+   width: 320px;
+   box-shadow: none;
+   border-radius: .3em;
+   border-color: #ab4a4a;
+   height: 15px;
+   font-weight: bold;
+   font-size: 14px;
+   margin-top: 10px;
+   margin-bottom: 0;
+   cursor: pointer;
+   text-align: center;
+ }
+
+.demo-user-login-btn:hover {
+   background-color: #aa6a6a;
+   border-color: #aa6a6a;
+ }
  
  hr {
    margin: 25px 0 14px;

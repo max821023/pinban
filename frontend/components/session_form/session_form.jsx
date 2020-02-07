@@ -88,6 +88,9 @@ class SessionForm extends React.Component {
               </label>
               {this.renderSignUpMSG(formType)}
               <input className="session-submit" type="submit" value={formType}/>
+              <div className="demo-user-div">
+                <button className="demo-user-login-btn">Demo</button>
+              </div>
             </div>
             <hr/>
             {this.renderOtherLinks(formType)} 

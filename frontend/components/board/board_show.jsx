@@ -6,6 +6,8 @@ class BoardShow extends React.Component {
     this.state = {
       title: ""
     }
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.updateArchive = this.updateArchive.bind(this);
   }
 
   componentDidMount() {
@@ -17,14 +19,31 @@ class BoardShow extends React.Component {
     return e => this.setState({ [field]: e.currentTarget.value })
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    const { board } = this.props;
+    const { title } = this.state;
+    const newBoard = Object.assign({}, { id: board.id, title });
+    this.props.updateBoard(newBoard);
+  }
+
+  updateArchive() {
+    const { board } = this.props;
+    const newBoard = { id: board.id, archived: true }
+    this.props.updateBoard(newBoard);
+  }
+
   render() {
-    const { board, updateBoard } = this.props;
+    const { board } = this.props;
     if (!board) return null;
 
     return (
       <div className="show-background">
         <nav className="board-show-nav">
-          <input type="text" value={this.state.title} onChange={this.update('title')}/>
+          <form onSubmit={this.handleSubmit} className="title-box">
+            <input type="text" value={this.state.title} onChange={this.update('title')} />
+          </form>
+          <button className="archive-btn" onClick={this.updateArchive}>Archive</button>
         </nav>
         <div className="boards">
           <div className="add-list">

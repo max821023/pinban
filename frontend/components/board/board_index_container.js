@@ -5,8 +5,10 @@ import { fetchBoards } from '../../actions/board_actions';
 
 
 const mSTP = (state) => {
+  let boards = Object.values(state.entities.boards);
+  boards = boards.filter(board => board.archived === false)
   return {
-    boards: Object.values(state.entities.boards)
+    boards
   }
 };
 

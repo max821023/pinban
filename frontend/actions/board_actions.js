@@ -48,6 +48,6 @@ export const createBoard = (board) => dispatch => {
 
 export const updateBoard = (board) => dispatch => {
   return BoardAPIUtil.updateBoard(board)
-    .then(board => dispatch(updateBoard(board)),
+    .then(board => dispatch(receiveBoard(board)),
     errors => dispatch(receiveBoardErrors(errors.responseJSON)))
 }

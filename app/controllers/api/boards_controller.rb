@@ -22,8 +22,7 @@ class Api::BoardsController < ApplicationController
 
   def update
     @board = Board.find(params[:id])
-    if @board 
-      @board.update_attributes(board_params)
+    if @board.update_attributes(board_params)
       render :show
     else
       render json: @board.errors.full_messages, status: 401
@@ -37,6 +36,6 @@ class Api::BoardsController < ApplicationController
   private
 
   def board_params
-    params.require(:board).permit(:title, :description)
+    params.require(:board).permit(:title, :description, :archived)
   end
 end

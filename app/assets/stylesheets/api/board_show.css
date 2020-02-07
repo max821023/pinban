@@ -5,6 +5,8 @@
 
 .board-show-nav {
   padding: 8px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .board-show-nav input {
@@ -17,8 +19,23 @@
   border-radius: 3px;
 }
 
+.board-show-nav .archive-btn {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  height: 28px;
+  width: 100px;
+  text-align: center;
+  border-radius: 3px;
+}
+
 .board-show-nav input:hover {
   background-color: #5ea5d2;
+}
+
+.board-show-nav .archive-btn:hover {
+  background-color: red;
 }
 
 .add-list {

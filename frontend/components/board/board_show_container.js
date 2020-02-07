@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import BoardShow from './board_show';
-import { fetchBoard } from '../../actions/board_actions';
+import { fetchBoard, updateBoard } from '../../actions/board_actions';
 
 const mSTP = (state, ownProps) => {
   return {
@@ -10,7 +10,8 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => {
   return {
-    fetchBoard: (boardId) => dispatch(fetchBoard(boardId))
+    fetchBoard: (boardId) => dispatch(fetchBoard(boardId)),
+    updateBoard: (board) => dispatch(updateBoard(board))
   }
 }
 

@@ -5,5 +5,38 @@
 
 .board-show-nav {
   padding: 8px;
-  background-color: turquoise;
+}
+
+.board-show-nav input {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  height: 28px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.board-show-nav input:hover {
+  background-color: #5ea5d2;
+}
+
+.add-list {
+  background-color: hsla(0,0%,100%,.24);
+  margin: 0 8px;
+  padding: 4px;
+  border-radius: 3px;
+  width: 256px;
+}
+
+.add-list input {
+  height: 20px;
+  width: 240px;
+  padding: 8px 12px;
+}
+
+.add-list-input::placeholder {
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
 }

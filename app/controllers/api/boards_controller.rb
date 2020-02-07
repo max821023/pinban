@@ -20,6 +20,16 @@ class Api::BoardsController < ApplicationController
     end
   end
 
+  def update
+    @board = Board.find(params[:id])
+    if @board 
+      @board.update_attributes(board_params)
+      render :show
+    else
+      render json: @board.errors.full_messages, status: 401
+    end
+  end
+
   def destroy
 
   end

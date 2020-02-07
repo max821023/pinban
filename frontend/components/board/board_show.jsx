@@ -18,7 +18,7 @@ class BoardShow extends React.Component {
   }
 
   render() {
-    const { board } = this.props;
+    const { board, updateBoard } = this.props;
     if (!board) return null;
 
     return (
@@ -26,6 +26,14 @@ class BoardShow extends React.Component {
         <nav className="board-show-nav">
           <input type="text" value={this.state.title} onChange={this.update('title')}/>
         </nav>
+        <div className="boards">
+          <div className="add-list">
+            <input type="text" className="add-list-input" placeholder="+ Add a list" />
+          </div>
+          <div className="image-div">
+            <img src={window.wip} />
+          </div>
+        </div>
       </div>
     );
   }

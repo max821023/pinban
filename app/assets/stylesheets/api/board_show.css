@@ -1,0 +1,9 @@
+.show-background {
+  height: 95vh;
+  background-color: #127bbd;
+}
+
+.board-show-nav {
+  padding: 8px;
+  background-color: turquoise;
+}

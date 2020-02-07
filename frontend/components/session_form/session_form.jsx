@@ -24,7 +24,7 @@ class SessionForm extends React.Component {
       username: 'demo123',
       password: 'password'
     }
-    this.props.processForm(user);
+    this.props.demoLogin(user);
   }
 
   update(field) {

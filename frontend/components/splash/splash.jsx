@@ -34,28 +34,29 @@ const Splash = () => (
     <div className="footer">
       <div className="personal-links">
         <a href="https://github.com/max821023">
-          <button>
+          <button className="footer-buttons">
             <i class="fab fa-github"></i>
           </button>
         </a>
         <a href="https://www.linkedin.com/in/max-lin-dev/">
-          <button>
+          <button className="footer-buttons">
             <i class="fab fa-linkedin-in"></i>
           </button>
         </a>
         <a href="https://angel.co/max-lin-dev">
-          <button>
+          <button className="footer-buttons">
             <i class="fab fa-angellist"></i>
           </button>
         </a>
         <a href="http://www.maxlin-dev.com/">
-          <button>
+          <button className="footer-buttons">
             <i class="fas fa-archive"></i>
           </button>
         </a>
       </div>
       <div className="copyright">
-        <i class="far fa-copyright"> Max Lin</i>
+        <i class="far fa-copyright"></i>
+        Max Lin
       </div>
     </div>
   </div>

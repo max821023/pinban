@@ -91,3 +91,40 @@ div.homepage {
     align-items: center;
   }
 }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+}
+
+.personal-links {
+  margin: auto;
+  width: 750px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.copyright {
+  font-family: sans-serif;
+  margin: auto;
+  font-size: 12px;
+  opacity: 65%;
+}
+
+i.fa-copyright {
+  margin-right: 2px;
+}
+
+.footer-buttons {
+  font-size: 27px;
+  opacity: 75%;
+}
+
+.footer-buttons:hover {
+  opacity: 100%;
+}

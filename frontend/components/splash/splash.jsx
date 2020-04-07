@@ -54,7 +54,9 @@ const Splash = () => (
           </button>
         </a>
       </div>
-      <div className="copyright"></div>
+      <div className="copyright">
+        <i class="far fa-copyright"> Max Lin</i>
+      </div>
     </div>
   </div>
 );

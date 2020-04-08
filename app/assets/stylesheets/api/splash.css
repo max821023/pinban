@@ -27,6 +27,10 @@ div.homepage {
   margin-left: 6px;
 }
 
+i.splash {
+  margin-right: 5px;
+}
+
 .login-signup {
   font-size: 17.5px;
   display: flex;
@@ -36,6 +40,10 @@ div.homepage {
 
 .login-btn {
   padding: 4px 8px;
+}
+
+.splash-login:hover {
+  text-decoration: underline;
 }
 
 .signup-btn {

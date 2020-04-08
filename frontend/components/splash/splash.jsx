@@ -6,13 +6,13 @@ const Splash = () => (
     <nav className="homepage-navbar">
       <div className="nav-home">
         <Link to="/">
-          <i className="fab fa-trello"></i>
+          <i className="fab fa-trello splash"></i>
           Pinban
         </Link>
       </div>
       <div className="login-signup">
         <div className="login-btn">
-          <Link to="/login">Log In</Link>
+          <Link to="/login" className="splash-login">Log In</Link>
         </div>
         <div className="signup-btn">
           <Link to="/signup">Sign Up</Link>

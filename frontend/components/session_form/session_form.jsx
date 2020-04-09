@@ -106,6 +106,14 @@ class SessionForm extends React.Component {
             {this.renderOtherLinks(formType)} 
           </form>
         </div>
+        <div className="footer-background">
+          <div className="login-left">
+            <img className="session-background" src={window.login_background_left}/>
+          </div>
+          <div className="login-right">
+            <img className="session-background" src={window.login_background_right}/>
+          </div>
+        </div>
       </div>
     );
   };

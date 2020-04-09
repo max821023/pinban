@@ -1,0 +1,92 @@
+.board-index-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.board-index-sidebar {
+  margin: 40px 0 0;
+  padding: 0 16px;
+  width: 240px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #182c4c;
+}
+
+.board-index-sidebar a {
+  font-size: 14px;
+  display: flex;
+  height: 18px;
+  align-items: center;
+}
+
+.board-index-sidebar i {
+  margin-right: 10px;
+}
+
+.board-index-sidebar ul li {
+  padding: 6px 8px;
+  border-radius: 4px;
+  width: 225px;
+}
+
+.board-li {
+  background-color: #e5f0f6;
+  color: #127bbd;
+}
+
+.all-boards {
+  margin: 40px 0 0 24px;
+  width: 100%;
+  max-width: 825px;
+  min-width: 288px;
+}
+
+i.far.fa-user {
+  height: 32px;
+  width: 32px;
+  font-size: 18px;
+  padding-left: 5px;
+}
+
+.board-title {
+  font-weight: 700;
+  font-family: sans-serif;
+  margin: auto;
+}
+
+.personal-boards-li {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.personal-boards-li li {
+  height: 76px;
+  width: 156px;
+  background-color: tomato;
+  padding: 10px;
+  border-radius: 3px;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+.personal-boards-li a {
+  margin: 0 16px 16px 0;
+}
+
+.personal-boards-li li.create-new-board {
+  background-color: #eff1f4;
+  color: #172b4d;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 76px;
+  cursor: pointer;
+}
+
+.personal-boards-li li.create-new-board:hover {
+ background-color: #e7e9ed;
+}

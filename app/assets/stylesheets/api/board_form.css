@@ -1,0 +1,112 @@
+.create-board-modal {
+  height: 88px;
+  width: 404px;
+  padding: 24px;
+  font-family: sans-serif;
+}
+
+.create-board-modal-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.board-modal-title {
+  height: 64px;
+  width: 264px;
+  padding: 16px;
+  border-radius: 3px;
+}
+
+.board-title-input {
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  padding: 2px 8px;
+  height: 24px;
+  width: 220px;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+
+.board-title-input:hover {
+  background-color: rgba(255, 255, 255, 0.418);
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.board-title-input::placeholder {
+  color: rgba(255, 255, 255, 0.445);
+  z-index: 1;
+}
+
+.board-title-input::placeholder:hover {
+  color: white;
+}
+
+.background-grid {
+  height: 102px;
+  width: 102px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.background-grid li {
+  height: 28px;
+  width: 28px;
+  border-radius: 3px;
+}
+
+.create-board-btn {
+  background-color: white;
+  margin: 8px 4px 8px 0;
+  padding: 6px 12px;
+  border-radius: 3px;
+  font-weight: 400;
+  color: #a5adba;
+  font-size: 14px;
+}
+
+.default-background-1 {
+  background-color: #127bbd;
+}
+
+.default-background-2 {
+  background-color: #d1903e;
+}
+
+.default-background-3 {
+  background-color: #54973f;
+}
+
+.default-background-4 {
+  background-color: #ae4736;
+}
+
+.default-background-5 {
+  background-color: #8a12bd;
+}
+
+.default-background-6 {
+  background-color: #bd12a0;
+}
+
+.default-background-7 {
+  background-color: #12bdba;
+}
+
+.default-background-8 {
+  background-color: #a6bd12;
+}
+
+.default-background-9 {
+  background-color: #fff;
+  text-align: center;
+}
+
+.image-div {
+  width: 752px;
+  height: 441px;
+  padding: 20px;
+}
+

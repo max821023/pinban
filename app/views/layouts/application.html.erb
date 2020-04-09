@@ -9,7 +9,14 @@
     <%= javascript_include_tag 'application' %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+      window.pinboard = "<%= image_url('pinboard.png') %>"
+      window.wip = "<%= image_url('wip.png') %>"
+      window.login_background_right = "<%= image_url('login_right.png') %>"
+      window.login_background_left = "<%= image_url('login_left.png') %>"
+    </script>
 
     <%= favicon_link_tag asset_path('trello.png') %>
   </head>

@@ -9,12 +9,22 @@ class SessionForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.loginDemoUser = this.loginDemoUser.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
+  }
+
+  loginDemoUser(e) {
+    e.preventDefault();
+    const user = {
+      username: 'demo123',
+      password: 'password'
+    }
+    this.props.demoLogin(user);
   }
 
   update(field) {
@@ -88,10 +98,21 @@ class SessionForm extends React.Component {
               </label>
               {this.renderSignUpMSG(formType)}
               <input className="session-submit" type="submit" value={formType}/>
+              <div className="demo-user-div">
+                <button className="demo-user-login-btn" onClick={this.loginDemoUser}>Demo</button>
+              </div>
             </div>
             <hr/>
             {this.renderOtherLinks(formType)} 
           </form>
+        </div>
+        <div className="footer-background">
+          <div className="login-left">
+            <img className="session-background" src={window.login_background_left}/>
+          </div>
+          <div className="login-right">
+            <img className="session-background" src={window.login_background_right}/>
+          </div>
         </div>
       </div>
     );

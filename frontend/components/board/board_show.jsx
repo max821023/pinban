@@ -36,9 +36,9 @@ class BoardShow extends React.Component {
   render() {
     const { board } = this.props;
     if (!board) return null;
-
+    console.log(board)
     return (
-      <div className="show-background">
+      <div className="show-background" style={{backgroundColor: board.board_background}}>
         <nav className="board-show-nav">
           <form onSubmit={this.handleSubmit} className="title-box">
             <input type="text" value={this.state.title} onChange={this.update('title')} />

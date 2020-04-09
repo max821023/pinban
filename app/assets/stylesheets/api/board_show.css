@@ -1,6 +1,5 @@
 .show-background {
   height: 95.8vh;
-  background-color: #127bbd;
 }
 
 .board-show-nav {
@@ -31,7 +30,7 @@
 }
 
 .board-show-nav input:hover {
-  background-color: #5ea5d2;
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
 }
 
 .board-show-nav .archive-btn:hover {

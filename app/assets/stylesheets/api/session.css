@@ -149,6 +149,17 @@ a.other-links:hover {
   width: 380px;
 }
 
+.login-left {
+  position: absolute;
+  bottom: 0;
+}
+
+.login-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 @media (max-width: 755px) {
   .session-background {
     display: none;

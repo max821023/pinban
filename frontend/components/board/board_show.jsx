@@ -1,4 +1,5 @@
 import React from 'react';
+import ListIndex from '../list/list_index';
 
 class BoardShow extends React.Component {
   constructor(props) {
@@ -46,11 +47,8 @@ class BoardShow extends React.Component {
           <button className="archive-btn" onClick={this.updateArchive}>Archive</button>
         </nav>
         <div className="boards">
-          <div className="add-list">
-            <input type="text" className="add-list-input" placeholder="+ Add a list" />
-          </div>
           <div className="image-div">
-            <img src={window.wip} />
+            <ListIndex createList={this.props.createList} updateList={this.props.updateList}/>
           </div>
         </div>
       </div>

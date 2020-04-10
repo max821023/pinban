@@ -47,9 +47,12 @@ class BoardShow extends React.Component {
           <button className="archive-btn" onClick={this.updateArchive}>Archive</button>
         </nav>
         <div className="boards">
-          <div className="image-div">
-            <ListIndex createList={this.props.createList} updateList={this.props.updateList}/>
-          </div>
+          <ListIndex 
+            createList={this.props.createList} 
+            updateList={this.props.updateList}
+            fetchLists={this.props.fetchLists}
+            board={board}
+          />
         </div>
       </div>
     );

@@ -1,5 +1,10 @@
 class Api::ListsController < ApplicationController
 
+  def index
+    @lists = Board.find(params[:id]).lists
+    render :index
+  end
+
   def create
     @list = List.new(list_params)
     @list.archived = false

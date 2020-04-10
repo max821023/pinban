@@ -13,3 +13,11 @@ export const updateList = (list) => (
     data: { list },
   })
 );
+
+export const fetchLists = (boardId) => (
+  $.ajax({
+    method: 'GET',
+    url: '/api/lists',
+    data: boardId 
+  })
+);

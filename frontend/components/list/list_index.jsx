@@ -64,8 +64,8 @@ class ListIndex extends React.Component {
                       </p>
                     </div>
                     <div className="card-container">CARDS!</div>
-                    <div>
-                      <button>+ Add another card</button>
+                    <div className="add-card">
+                      <button className="add-card-button">+ Add another card</button>
                     </div>
                   </div>
                 </div>

@@ -12,11 +12,6 @@ class ListIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchLists(this.props.board.id)
-      .then(lists => {
-        this.setState({
-          lists
-        })
-      })
   }
 
   update(field) {
@@ -33,11 +28,15 @@ class ListIndex extends React.Component {
   }
 
   render() {
-    console.log(this.state)
+    console.log(this.props.lists)
+    
     return (
       <div>
         <div className="lists-container">
           <div className="created-lists">
+            {this.props.lists.filter(list => list.archived === false).map(list => (
+              <h1>{list.title}</h1>
+            ))}
           </div>
           <div className="add-list">
             <button className="add-list-button">+ Add a list</button>

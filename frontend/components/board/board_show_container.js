@@ -5,8 +5,9 @@ import { createList, updateList, fetchLists } from '../../actions/list_actions';
 
 const mSTP = (state, ownProps) => {
   return {
-    board: state.entities.boards[ownProps.match.params.boardId]
-  }
+    board: state.entities.boards[ownProps.match.params.boardId],
+    lists: Object.values(state.entities.lists)
+  };
 };
 
 const mDTP = dispatch => {

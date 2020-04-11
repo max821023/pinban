@@ -8,7 +8,7 @@ const listsReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_LISTS:
-      return Object.assign({}, state, action.lists)
+      return action.lists
     case RECEIVE_LIST:
       return Object.assign({}, state, { [action.list.id]: action.list })
     default:

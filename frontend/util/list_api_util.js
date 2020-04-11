@@ -18,6 +18,6 @@ export const fetchLists = (boardId) => (
   $.ajax({
     method: 'GET',
     url: '/api/lists',
-    data: boardId 
+    data: { id: boardId }
   })
 );

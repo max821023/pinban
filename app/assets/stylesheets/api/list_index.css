@@ -1,7 +1,7 @@
 .add-list-button {
   background-color: hsla(0,0%,100%,.24);
   border-radius: 3px;
-  width: 239px;
+  width: 255px;
   height: 40px;
   margin-left: 8px;
   padding-left: 17px;
@@ -16,6 +16,7 @@
 
 .add-list {
   position: relative;
+  height: 80px;
 }
 
 .add-list-form {
@@ -39,10 +40,39 @@
 
 .lists-container {
   display: flex;
+  height: 886px;
 }
 
 .created-lists {
   display: flex;
+}
+
+.list-column {
+  margin-left: 8px;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.list-content {
+  background-color: #ebecf0;
+  border-radius: 2px;
+}
+
+.list-title {
+  display: flex;
+  padding: 12px;
+  padding-left: 17px;
+  justify-content: space-between;
+  height: 16px;
+  width: 248px;
+}
+
+.card-container {
+  margin: 0px 10px 3px;
+  height: 32px;
+  background-color: red;
+  line-height: 30px;
+  padding-left: 7px;
 }
 
 .list-title-input {
@@ -71,4 +101,10 @@
 
 .list-add-buttons > input:hover {
   background-color: #61bd4f;
+}
+
+.add-list-x {
+    position: relative;
+    left: 98px;
+    top: 12px;
 }

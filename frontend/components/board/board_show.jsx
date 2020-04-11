@@ -20,8 +20,8 @@ class BoardShow extends React.Component {
     return e => this.setState({ [field]: e.currentTarget.value })
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
+  handleSubmit() {
+    // e.preventDefault();
     const { board } = this.props;
     const { title } = this.state;
     const newBoard = Object.assign({}, { id: board.id, title });
@@ -34,14 +34,21 @@ class BoardShow extends React.Component {
     this.props.updateBoard(newBoard);
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.title !== prevState.title) {
+      this.handleSubmit();
+    }
+  }
+
   render() {
     const { board } = this.props;
     if (!board) return null;
-    console.log(board)
+
+    console.log(this.state)
     return (
       <div className="show-background" style={{backgroundColor: board.board_background}}>
         <nav className="board-show-nav">
-          <form onSubmit={this.handleSubmit} className="title-box">
+          <form className="title-box">
             <input type="text" value={this.state.title} onChange={this.update('title')} />
           </form>
           <button className="archive-btn" onClick={this.updateArchive}>Archive</button>

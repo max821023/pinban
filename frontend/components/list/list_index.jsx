@@ -35,16 +35,21 @@ class ListIndex extends React.Component {
         <div className="lists-container">
           <div className="created-lists">
             {this.props.lists.filter(list => list.archived === false).map(list => (
-              <h1>{list.title}</h1>
+              <div className="list-column" key={list.id}>
+                <div className="list-title">{list.title}</div>
+                <div className="card-container">
+                  CARDS!
+                </div>
+              </div>
             ))}
           </div>
           <div className="add-list">
             <button className="add-list-button">+ Add a list</button>
             <form className="add-list-form" onSubmit={this.handleSubmit}>
-              <input type="text" value={this.state.title} onChange={this.update('title')} placeholder="Enter list title..."/>
-              <section>
-                <input type="submit"/>
-                <span>X</span>
+              <input className="list-title-input" type="text" value={this.state.title} onChange={this.update('title')} placeholder="Enter list title..."/>
+              <section className="list-add-buttons">
+                <input type="submit" value="Add List"/>
+                <button><i className="fas fa-times"></i></button>
               </section>
             </form>
           </div>

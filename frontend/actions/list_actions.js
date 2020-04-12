@@ -3,6 +3,7 @@ import * as ListAPIUtil from '../util/list_api_util';
 export const RECEIVE_LISTS = "RECEIVE_LISTS";
 export const RECEIVE_LIST = 'RECEIVE_LIST';
 export const RECEIVE_LIST_ERRORS = 'RECEIVE_LIST_ERRORS';
+export const REMOVE_LIST = 'REMOVE_LIST';
 
 const receiveList = (list) => {
   return {
@@ -23,6 +24,13 @@ const receiveListErrors = (errors) => {
     type: RECEIVE_LIST_ERRORS,
     errors
   };
+};
+
+const removeList = (list) => {
+  return {
+    type: REMOVE_LIST,
+    list
+  }
 };
 
 export const fetchLists = (boardId) => dispatch => {
@@ -47,4 +55,12 @@ export const updateList = (list) => (dispatch) => {
     dispatch(receiveList(list)),
       (errors) => dispatch(receiveListErrors(errors.responseJSON));
   });
+};
+
+export const deleteList = (listId) => dispatch => {
+  return ListAPIUtil.deleteList(listId)
+    .then((list) => {
+      dispatch(removeList(list)),
+      errors => dispatch(receiveListErrors(errors.responseJSON))
+    })
 };

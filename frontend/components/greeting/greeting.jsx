@@ -11,18 +11,23 @@ class Greeting extends React.Component {
 
   renderDropdown() {
     this.setState({ showDropDown: true })
+    document.addEventListener('click', this.closeDropdown)
   }
 
   closeDropdown(e) {
-    if (this.state.showDropDown && e.target.className !== "dropdown") {
+    if (this.state.showDropDown && 
+      e.target.className !== "dropdown" &&
+      e.target.className !== "dropdownName" &&
+      e.target.className !== "dropdownName-wrapper") {
       this.setState({ showDropDown: false });
+      document.removeEventListener('click', this.closeDropdown)
     }
   }
 
   render() {
     const { currentUser, logout } = this.props
     return (
-    <div className="header-group" onClick={this.closeDropdown}>
+    <div className="header-group">
       <div className="navbar">
         <div className="left-side">
           <i className="material-icons">
@@ -38,8 +43,8 @@ class Greeting extends React.Component {
         <div className="right-side">
           <p className="initials" onClick={this.renderDropdown}>{currentUser.username[0].toUpperCase()}</p>
           {this.state.showDropDown && <div className="dropdown">
-            <div><p className="dropdownName">{currentUser.username}</p></div>
-            <p className="x" onClick={this.closeDropdown}><i className="fas fa-times"></i></p>
+            <div className="dropdownName-wrapper"><p className="dropdownName">{currentUser.username}</p></div>
+            <p className="x"><i className="fas fa-times"></i></p>
             <ul className="dropdownUl">
               <li className="line"><hr /></li>
               <li className="logout-button"><button onClick={logout}>Log Out</button></li>

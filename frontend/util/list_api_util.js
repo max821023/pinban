@@ -21,3 +21,11 @@ export const fetchLists = (boardId) => (
     data: { id: boardId }
   })
 );
+
+export const deleteList = (listId) => (
+  $.ajax({
+    method: 'DELETE',
+    url: `/api/lists/${listId}`,
+    data: { id: listId }
+  })
+);

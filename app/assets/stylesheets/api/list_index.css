@@ -41,7 +41,7 @@
 
 .lists-container {
   display: flex;
-  height: 886px;
+  height: 780px;
   overflow-x: scroll;
 }
 
@@ -68,6 +68,21 @@
   justify-content: space-between;
   height: 16px;
   width: 243px;
+}
+
+.list-title-button {
+  width: 222px;
+  cursor: pointer;
+  position: relative;
+}
+
+.list-title-change-input {
+  background-color: red;
+  position: absolute;
+  left: 0;
+  display: none;
+  top: 0;
+  width: 196px;
 }
 
 .card-container {

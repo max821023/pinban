@@ -1,5 +1,7 @@
 import React from 'react';
 
+import CardIndex from '../card/card_index';
+
 class ListIndex extends React.Component {
   constructor(props) {
     super(props)
@@ -76,7 +78,6 @@ class ListIndex extends React.Component {
   }
 
   render() {
-    
     return (
       <div>
         <div className="lists-container">
@@ -87,13 +88,20 @@ class ListIndex extends React.Component {
                 <div className="list-column" key={list.id}>
                   <div className="list-content">
                     <div className="list-title">
-                      <p className="list-title-button" id={list.id} onClick={(e) => this.showListTitleChange(e, list)}>
+                      <p
+                        className="list-title-button"
+                        id={list.id}
+                        onClick={(e) => this.showListTitleChange(e, list)}
+                      >
                         {list.title}
                         {this.state.listTitleInput ? (
-                          <input className="list-title-change-input" type="text" value={this.state.title} onChange={this.update('title')}/>
-                        ) : (
-                          null
-                        )}
+                          <input
+                            className="list-title-change-input"
+                            type="text"
+                            value={this.state.title}
+                            onChange={this.update("title")}
+                          />
+                        ) : null}
                       </p>
                       <p>
                         <i
@@ -102,7 +110,14 @@ class ListIndex extends React.Component {
                         ></i>
                       </p>
                     </div>
-                    <div className="card-container">CARDS!</div>
+                    <CardIndex
+                      list={list}
+                      createCard={this.props.createCard}
+                      updateCard={this.props.updateCard}
+                      fetchCards={this.props.fetchCards}
+                      deleteCard={this.props.deleteCard}
+                      cards={this.props.cards}
+                    />
                     <div className="add-card">
                       <button className="add-card-button">
                         + Add another card

@@ -13,7 +13,7 @@ import greeting_container from "./greeting/greeting_container";
 
 
 const App = () => (
-  <div>
+  <div style={{height: '100%'}}>
     <AuthRoute exact path="/" component={Splash} />
     <ProtectedRoute path="/" component={greeting_container}/>
     <ProtectedRoute exact path="/boards" component={BoardIndexContainer}/>

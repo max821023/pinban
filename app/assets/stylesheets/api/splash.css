@@ -8,6 +8,10 @@ body {
   overflow: auto;
 }
 
+.root {
+  height: 100%;
+}
+
 div.homepage {
   background-image: linear-gradient(to top left, #516ac2, #137abd);
   height: 100vh;

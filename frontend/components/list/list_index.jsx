@@ -79,7 +79,7 @@ class ListIndex extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{height: '100%'}}>
         <div className="lists-container">
           <div className="created-lists">
             {this.props.lists

@@ -41,7 +41,7 @@
 
 .lists-container {
   display: flex;
-  height: 780px;
+  height: 100%;
   overflow-x: scroll;
 }
 

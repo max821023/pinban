@@ -1,0 +1,148 @@
+.add-list-button {
+  background-color: hsla(0,0%,100%,.24);
+  border-radius: 3px;
+  width: 255px;
+  height: 40px;
+  margin-left: 8px;
+  margin-right: 10px;
+  padding-left: 17px;
+  color: white;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.add-list-button:hover {
+  background-color: hsla(0,0%,100%,.33);
+}
+
+.add-list {
+  position: relative;
+  height: 80px;
+}
+
+.add-list-form {
+  background-color: #EBECF0;
+  /* display: none; */
+  margin: 0 8px;
+  padding: 4px;
+  border-radius: 3px;
+  width: 264px;
+  height: 72px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.add-list-form > input {
+    background: white;
+    width: 236px;
+    height: 16px;
+}
+
+.lists-container {
+  display: flex;
+  height: 780px;
+  overflow-x: scroll;
+}
+
+.created-lists {
+  display: flex;
+}
+
+.list-column {
+  margin-left: 8px;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.list-content {
+  background-color: #ebecf0;
+  border-radius: 2px;
+  padding-bottom: 1px;
+}
+
+.list-title {
+  display: flex;
+  padding: 12px;
+  padding-left: 17px;
+  justify-content: space-between;
+  height: 16px;
+  width: 243px;
+}
+
+.list-title-button {
+  width: 222px;
+  cursor: pointer;
+  position: relative;
+}
+
+.list-title-change-input {
+  background-color: red;
+  position: absolute;
+  left: 0;
+  display: none;
+  top: 0;
+  width: 196px;
+}
+
+.card-container {
+  margin: 0px 10px 3px;
+  height: 32px;
+  background-color: white;
+  line-height: 30px;
+  padding-left: 7px;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 rgba(9,30,66,.25)
+}
+
+.card-container:hover {
+  background-color: #f7f7f7;
+}
+
+.add-card-button {
+  margin: 7px 10px;
+  padding: 6px;
+  padding-left: 14px;
+  width: 232px;
+  border-radius: 2px;
+  color: #5e6c84;
+}
+
+.add-card-button:hover {
+  background-color: rgba(9,30,66,.08); 
+  color: #172b4d;
+}
+
+.list-title-input {
+  padding: 8px 12px;
+  font-family: sans-serif;
+  font-size: 14px;
+  border: 2px solid #127abd;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+
+.list-add-buttons {
+  display: flex;
+}
+
+.list-add-buttons > input {
+  background-color: #5aac44;
+  padding: 4px 12px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+  height: 24px;
+  border-radius: 3px;
+  margin-right: 14px;
+}
+
+.list-add-buttons > input:hover {
+  background-color: #61bd4f;
+}
+
+.add-list-x {
+    position: relative;
+    left: 98px;
+    top: 12px;
+}

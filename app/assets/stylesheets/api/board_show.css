@@ -1,6 +1,5 @@
 .show-background {
-  height: 95.8vh;
-  background-color: #127bbd;
+  height: 95.3vh;
 }
 
 .board-show-nav {
@@ -31,29 +30,9 @@
 }
 
 .board-show-nav input:hover {
-  background-color: #5ea5d2;
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
 }
 
 .board-show-nav .archive-btn:hover {
   background-color: red;
-}
-
-.add-list {
-  background-color: hsla(0,0%,100%,.24);
-  margin: 0 8px;
-  padding: 4px;
-  border-radius: 3px;
-  width: 256px;
-}
-
-.add-list input {
-  height: 20px;
-  width: 240px;
-  padding: 8px 12px;
-}
-
-.add-list-input::placeholder {
-  color: white;
-  font-family: sans-serif;
-  font-size: 14px;
 }

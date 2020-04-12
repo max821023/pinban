@@ -13,7 +13,10 @@ class BoardForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const board = Object.assign({}, { title: this.state.title });
+    const board = Object.assign({}, { 
+      title: this.state.title,
+      board_background: this.state.backgroundColor
+    });
     this.props.createBoard(board).then(board => {
       this.props.history.push(`/boards/${board.id}`)
       this.props.closeModal()

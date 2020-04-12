@@ -69,6 +69,7 @@ div.dropdown {
   font-size: 14px;
   font-family: sans-serif;
   font-weight: 400;
+  z-index: 1;
 }
 
 p.initials {

@@ -44,7 +44,6 @@ class BoardShow extends React.Component {
     const { board } = this.props;
     if (!board) return null;
 
-    console.log(this.state)
     return (
       <div className="show-background" style={{backgroundColor: board.board_background}}>
         <nav className="board-show-nav">
@@ -55,12 +54,16 @@ class BoardShow extends React.Component {
         </nav>
         <div className="boards">
           <ListIndex 
+            board={board}
             createList={this.props.createList} 
             updateList={this.props.updateList}
             fetchLists={this.props.fetchLists}
             deleteList={this.props.deleteList}
             lists={this.props.lists}
-            board={board}
+            createCard={this.props.createCard}
+            updateCard={this.props.updateCard}
+            fetchCards={this.props.fetchCards}
+            deleteCard={this.props.deleteCard}
           />
         </div>
       </div>

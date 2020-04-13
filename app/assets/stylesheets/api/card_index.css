@@ -1,0 +1,83 @@
+.individual-card {
+  margin: 0px 10px 7px;
+  height: 32px;
+  background-color: white;
+  line-height: 30px;
+  padding-left: 7px;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 rgba(9,30,66,.25);
+  position: relative;
+}
+
+.individual-card:hover {
+  background-color: #f7f7f7;
+}
+
+.card-trash {
+  position: absolute;
+  cursor: pointer;
+  top: 1px;
+  right: 8px;
+  display: none;
+  opacity: 50%;
+}
+
+.individual-card:hover .card-trash {
+  display: block;
+}
+
+.add-card-form-wrapper {
+  position: relative;
+}
+
+.add-card-button {
+  margin: 3px 10px 7px;
+  padding: 6px;
+  padding-left: 14px;
+  width: 232px;
+  border-radius: 2px;
+  color: #5e6c84;
+}
+
+.add-card-button:hover {
+  background-color: rgba(9,30,66,.08); 
+  color: #172b4d;
+}
+
+.card-title-input {
+  margin: 0px 10px 7px;
+  height: 32px;
+  background-color: white;
+  line-height: 30px;
+  padding-left: 7px;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 rgba(9,30,66,.25);
+  width: 245px;
+  padding-bottom: 34px;
+}
+
+.card-add-buttons {
+  padding-bottom: 7px;
+}
+
+.card-add-buttons > input {
+  background-color: #5aac44;
+  padding: 4px 12px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+  height: 24px;
+  border-radius: 3px;
+  margin-right: 14px;
+  margin-left: 10px;
+}
+
+.card-add-buttons > input:hover {
+  background-color: #61bd4f;
+}
+
+.add-card-x {
+  position: absolute;
+  top: 81px;
+  left: 104px;
+}

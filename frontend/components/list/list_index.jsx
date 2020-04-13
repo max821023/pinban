@@ -1,5 +1,7 @@
 import React from 'react';
 
+import CardIndex from '../card/card_index';
+
 class ListIndex extends React.Component {
   constructor(props) {
     super(props)
@@ -76,9 +78,8 @@ class ListIndex extends React.Component {
   }
 
   render() {
-    
     return (
-      <div>
+      <div style={{ height: "100%" }}>
         <div className="lists-container">
           <div className="created-lists">
             {this.props.lists
@@ -87,32 +88,42 @@ class ListIndex extends React.Component {
                 <div className="list-column" key={list.id}>
                   <div className="list-content">
                     <div className="list-title">
-                      <p className="list-title-button" id={list.id} onClick={(e) => this.showListTitleChange(e, list)}>
+                      <p
+                        className="list-title-button"
+                        id={list.id}
+                        onClick={(e) => this.showListTitleChange(e, list)}
+                      >
                         {list.title}
                         {this.state.listTitleInput ? (
-                          <input className="list-title-change-input" type="text" value={this.state.title} onChange={this.update('title')}/>
-                        ) : (
-                          null
-                        )}
+                          <input
+                            className="list-title-change-input"
+                            type="text"
+                            value={this.state.title}
+                            onChange={this.update("title")}
+                          />
+                        ) : null}
                       </p>
-                      <p>
+                      <p className="list-trash">
                         <i
                           className="fas fa-trash-alt"
                           onClick={() => this.props.deleteList(list.id)}
                         ></i>
                       </p>
                     </div>
-                    <div className="card-container">CARDS!</div>
-                    <div className="add-card">
-                      <button className="add-card-button">
-                        + Add another card
-                      </button>
-                    </div>
+                    <CardIndex
+                      cards={list.cards}
+                      boardId={this.props.board.id}
+                      fetchLists={this.props.fetchLists}
+                      createCard={this.props.createCard}
+                      updateCard={this.props.updateCard}
+                      fetchCards={this.props.fetchCards}
+                      deleteCard={this.props.deleteCard}
+                    />
                   </div>
                 </div>
               ))}
           </div>
-          <div className="add-list">
+          <div className="add-list" id="add-list">
             <button className="add-list-button" onClick={this.showListForm}>
               + Add a list
             </button>

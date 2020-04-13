@@ -36,7 +36,11 @@ class BoardIndex extends React.Component {
               </div>
               <ul className="personal-boards-li">
                 {boards.map(board => 
-                  <Link to={`/boards/${board.id}`}><li style={{backgroundColor: board.board_background}}><span>{board.title}</span></li></Link>
+                  <Link to={`/boards/${board.id}`}>
+                    <li style={{backgroundColor: board.board_background}}>
+                      <span>{board.title}</span>
+                    </li>
+                  </Link>
                 )}
                 <li className="create-new-board" onClick={() => this.props.openModal('create board')}>
                     Create new board

@@ -41,7 +41,7 @@
 
 .lists-container {
   display: flex;
-  height: 780px;
+  height: 98.7%;
   overflow-x: scroll;
 }
 
@@ -57,60 +57,58 @@
 
 .list-content {
   background-color: #ebecf0;
-  border-radius: 2px;
+  border-radius: 4px;
   padding-bottom: 1px;
 }
 
 .list-title {
   display: flex;
   padding: 12px;
+  padding-top: 15px;
   padding-left: 17px;
   justify-content: space-between;
   height: 16px;
   width: 243px;
+  position: relative;
 }
 
 .list-title-button {
   width: 222px;
   cursor: pointer;
   position: relative;
+  font-weight: 600;
+}
+
+.list-trash {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  cursor: pointer;
+  right: 9px;
+  top: 11px;
+}
+
+.list-trash:hover {
+  background-color: rgba(9,30,66,.08);
+  border-radius: 2px;
+}
+
+.list-trash > i {
+  position: absolute;
+  left: 7px;
+  top: 6px;
 }
 
 .list-title-change-input {
-  background-color: red;
-  position: absolute;
-  left: 0;
-  display: none;
-  top: 0;
-  width: 196px;
-}
-
-.card-container {
-  margin: 0px 10px 3px;
-  height: 32px;
   background-color: white;
-  line-height: 30px;
-  padding-left: 7px;
-  border-radius: 2px;
-  box-shadow: 0 1px 0 rgba(9,30,66,.25)
-}
-
-.card-container:hover {
-  background-color: #f7f7f7;
-}
-
-.add-card-button {
-  margin: 7px 10px;
-  padding: 6px;
-  padding-left: 14px;
-  width: 232px;
-  border-radius: 2px;
-  color: #5e6c84;
-}
-
-.add-card-button:hover {
-  background-color: rgba(9,30,66,.08); 
-  color: #172b4d;
+  position: absolute;
+  left: -7px;
+  display: none;
+  top: -7px;
+  width: 207px;
+  padding: 5px;
+  border: 2px solid #127bbd;
+  border-radius: 4px;
 }
 
 .list-title-input {
@@ -142,7 +140,7 @@
 }
 
 .add-list-x {
-    position: relative;
-    left: 98px;
-    top: 12px;
+  position: relative;
+  left: 98px;
+  top: 12px;
 }

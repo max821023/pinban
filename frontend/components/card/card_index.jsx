@@ -41,6 +41,7 @@ class CardIndex extends React.Component {
     .then(() => {
       this.setState({ addCardForm: false, title: "" });
       document.removeEventListener("click", this.closeCardForm);
+      this.props.fetchLists(this.props.boardId);
     });
   }
 
@@ -58,6 +59,7 @@ class CardIndex extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     return (
       <div className="card-container">
         <div className="card-list">
@@ -67,7 +69,10 @@ class CardIndex extends React.Component {
               <p className="card-trash">
                 <i
                   className="fas fa-trash-alt"
-                  onClick={() => this.props.deleteCard(card.id)}
+                  onClick={() => {
+                    this.props.deleteCard(card.id);
+                    this.props.fetchLists(this.props.boardId);
+                  }}
                 ></i>
               </p>
             </div>

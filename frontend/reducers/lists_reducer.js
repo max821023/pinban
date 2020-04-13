@@ -22,3 +22,5 @@ const listsReducer = (state = {}, action) => {
 };
 
 export default listsReducer;
+
+// home button onclick clear lists return empty object action reducers no util

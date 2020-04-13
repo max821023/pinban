@@ -112,6 +112,8 @@ class ListIndex extends React.Component {
                     </div>
                     <CardIndex
                       cards={list.cards}
+                      boardId={this.props.board.id}
+                      fetchLists={this.props.fetchLists}
                       createCard={this.props.createCard}
                       updateCard={this.props.updateCard}
                       fetchCards={this.props.fetchCards}

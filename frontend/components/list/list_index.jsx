@@ -103,7 +103,7 @@ class ListIndex extends React.Component {
                           />
                         ) : null}
                       </p>
-                      <p>
+                      <p className="trash">
                         <i
                           className="fas fa-trash-alt"
                           onClick={() => this.props.deleteList(list.id)}
@@ -111,18 +111,8 @@ class ListIndex extends React.Component {
                       </p>
                     </div>
                     <CardIndex
-                      list={list}
-                      createCard={this.props.createCard}
-                      updateCard={this.props.updateCard}
-                      fetchCards={this.props.fetchCards}
-                      deleteCard={this.props.deleteCard}
-                      cards={this.props.cards}
+                      cards={list.cards}
                     />
-                    <div className="add-card">
-                      <button className="add-card-button">
-                        + Add another card
-                      </button>
-                    </div>
                   </div>
                 </div>
               ))}

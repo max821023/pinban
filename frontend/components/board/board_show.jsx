@@ -59,11 +59,6 @@ class BoardShow extends React.Component {
             fetchLists={this.props.fetchLists}
             deleteList={this.props.deleteList}
             lists={this.props.lists}
-            createCard={this.props.createCard} 
-            updateCard={this.props.updateCard}
-            fetchCards={this.props.fetchCards}
-            deleteCard={this.props.deleteCard}
-            cards={this.props.cards}
             board={board}
           />
         </div>

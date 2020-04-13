@@ -38,5 +38,5 @@
 }
 
 .boards {
-  height: 95.3%;
+  height: calc(100% - 44px);
 }

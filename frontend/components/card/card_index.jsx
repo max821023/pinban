@@ -36,7 +36,7 @@ class CardIndex extends React.Component {
     this.props.createCard({
       title: this.state.title,
       archived: false,
-      list_id: this.props.cards[0].list_id,
+      list_id: this.props.listId,
     })
     .then(() => {
       this.setState({ addCardForm: false, title: "" });

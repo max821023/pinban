@@ -79,7 +79,7 @@ class ListIndex extends React.Component {
 
   render() {
     return (
-      <div style={{height: '100%'}}>
+      <div style={{ height: "100%" }}>
         <div className="lists-container">
           <div className="created-lists">
             {this.props.lists
@@ -103,7 +103,7 @@ class ListIndex extends React.Component {
                           />
                         ) : null}
                       </p>
-                      <p className="trash">
+                      <p className="list-trash">
                         <i
                           className="fas fa-trash-alt"
                           onClick={() => this.props.deleteList(list.id)}
@@ -112,12 +112,16 @@ class ListIndex extends React.Component {
                     </div>
                     <CardIndex
                       cards={list.cards}
+                      createCard={this.props.createCard}
+                      updateCard={this.props.updateCard}
+                      fetchCards={this.props.fetchCards}
+                      deleteCard={this.props.deleteCard}
                     />
                   </div>
                 </div>
               ))}
           </div>
-          <div className="add-list">
+          <div className="add-list" id="add-list">
             <button className="add-list-button" onClick={this.showListForm}>
               + Add a list
             </button>

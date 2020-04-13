@@ -79,7 +79,7 @@
   font-weight: 600;
 }
 
-.trash {
+.list-trash {
   width: 26px;
   height: 26px;
   position: absolute;
@@ -88,12 +88,12 @@
   top: 11px;
 }
 
-.trash:hover {
+.list-trash:hover {
   background-color: rgba(9,30,66,.08);
   border-radius: 2px;
 }
 
-.trash > i {
+.list-trash > i {
   position: absolute;
   left: 7px;
   top: 6px;

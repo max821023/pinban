@@ -9,10 +9,20 @@ class CardIndex extends React.Component {
     };
     this.showCardForm = this.showCardForm.bind(this);
     this.closeCardForm = this.closeCardForm.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (this.state.title !== prevState.title) {
+  //     this.props.fetchCards(this.props.cards[0].list_id);
+  //   }
+  // }
+
+  // componentDidMount() {
+  //   this.props.fetchCards(this.props.cards[0].list_id)
+  // }
+
   update(field) {
-    console.log(this.props)
     return (e) => this.setState({ [field]: e.currentTarget.value });
   }
 
@@ -21,18 +31,18 @@ class CardIndex extends React.Component {
     document.addEventListener('click', this.closeCardForm)
   }
 
-  // handleSubmit(e) {
-  //   e.preventDefault();
-  //   this.props.createCard({
-  //     title: this.state.title,
-  //     archived: false,
-  //     list_id: this.props.board.id,
-  //   })
-  //   .then(() => {
-  //     this.setState({ addCardForm: false, title: "" });
-  //     document.removeEventListener("click", this.closeCardForm);
-  //   });
-  // }
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.createCard({
+      title: this.state.title,
+      archived: false,
+      list_id: this.props.cards[0].list_id,
+    })
+    .then(() => {
+      this.setState({ addCardForm: false, title: "" });
+      document.removeEventListener("click", this.closeCardForm);
+    });
+  }
 
   closeCardForm(e) {
     if (this.state.addCardForm && 
@@ -53,7 +63,13 @@ class CardIndex extends React.Component {
         <div className="card-list">
           {this.props.cards.map((card) => (
             <div className="individual-card" key={card.id}>
-              {card.title}
+              <p>{card.title}</p>
+              <p className="card-trash">
+                <i
+                  className="fas fa-trash-alt"
+                  onClick={() => this.props.deleteCard(card.id)}
+                ></i>
+              </p>
             </div>
           ))}
         </div>
@@ -82,7 +98,7 @@ class CardIndex extends React.Component {
             </div>
           ) : (
             <button className="add-card-button" onClick={this.showCardForm}>
-              + Add another card
+              + Add a card
             </button>
           )}
         </div>

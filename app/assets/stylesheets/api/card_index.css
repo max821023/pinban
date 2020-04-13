@@ -5,11 +5,25 @@
   line-height: 30px;
   padding-left: 7px;
   border-radius: 2px;
-  box-shadow: 0 1px 0 rgba(9,30,66,.25)
+  box-shadow: 0 1px 0 rgba(9,30,66,.25);
+  position: relative;
 }
 
 .individual-card:hover {
   background-color: #f7f7f7;
+}
+
+.card-trash {
+  position: absolute;
+  cursor: pointer;
+  top: 1px;
+  right: 8px;
+  display: none;
+  opacity: 50%;
+}
+
+.individual-card:hover .card-trash {
+  display: block;
 }
 
 .add-card-form-wrapper {

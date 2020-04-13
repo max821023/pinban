@@ -65,10 +65,12 @@ class SessionForm extends React.Component {
   render() {
     const { formType } = this.props;
     return (
-      <div>
+      <div style={{ overflowY: "hidden"}}>
         <h1 className="header">
-          <i className="fab fa-trello"></i>
-          <span className="icon">Pinban</span>
+          <Link to="/" className="icon">
+            <i className="fab fa-trello"></i>
+            Pinban
+          </Link>
         </h1>
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">

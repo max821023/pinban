@@ -12,7 +12,9 @@ const Splash = () => (
       </div>
       <div className="login-signup">
         <div className="login-btn">
-          <Link to="/login" className="splash-login">Log In</Link>
+          <Link to="/login" className="splash-login">
+            Log In
+          </Link>
         </div>
         <div className="signup-btn">
           <Link to="/signup">Sign Up</Link>
@@ -21,11 +23,15 @@ const Splash = () => (
     </nav>
     <div className="center-items">
       <div className="left-center">
-        <h1>Pinban lets you work more collaboratively and get more done.</h1>
-        <p>
-          Pinban’s boards, lists, and cards enable you to organize and
-          prioritize your projects in a fun, flexible, and rewarding way.
-        </p>
+        <div>
+          <h1>Pinban lets you work more collaboratively and get more done.</h1>
+        </div>
+        <div>
+          <p>
+            Pinban’s boards, lists, and cards enable you to organize and
+            prioritize your projects in a fun, flexible, and rewarding way.
+          </p>
+        </div>
       </div>
       <div className="right-center">
         <img src={window.pinboard} />

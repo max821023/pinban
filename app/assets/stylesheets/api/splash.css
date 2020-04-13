@@ -63,6 +63,7 @@ i.splash {
   padding: 112px 15px 80px;
   margin: 0 47px;
   flex-wrap: wrap;
+  height: calc(100% - 269px);
 }
 
 .left-center {
@@ -99,7 +100,6 @@ i.splash {
   .right-center {
     width: 50%;
     margin-left: 20px;
-    display: flex;
     align-items: center;
   }
 }
